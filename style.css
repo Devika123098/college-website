@@ -1,11 +1,11 @@
-/* Reset */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Typography and Body */
+
 body {
   min-height: 100vh;
   background: linear-gradient(135deg, #f7fafc 0%, #e0eefe 100%);
@@ -42,7 +42,7 @@ p, li {
   margin-bottom: 18px;
 }
 
-/* Navbar */
+
 .navbar {
   background-color: #fff;
   border-radius: 7px;
@@ -75,7 +75,7 @@ p, li {
   color: #fff;
 }
 
-/* Main images */
+
 img {
   display: block;
   max-width: 100%;
@@ -84,7 +84,7 @@ img {
   margin: 0 auto 16px auto;
 }
 
-/* About & Courses Section */
+
 #about {
   max-width: 960px;
   background: #fff;
@@ -94,7 +94,6 @@ img {
   padding: 38px 24px;
 }
 
-/* List styles */
 ul, ol {
   margin-bottom: 16px;
   margin-left: 24px;
@@ -110,7 +109,7 @@ ul > li > b {
   color: #007BFF;
 }
 
-/* Contact Form */
+
 #contact-form {
   background: #fff;
   border-radius: 16px;
@@ -181,7 +180,7 @@ ul > li > b {
   color: #fff;
 }
 
-/* Responsive Design */
+
 @media (max-width: 900px) {
   #about {
     padding: 18px 10px;
