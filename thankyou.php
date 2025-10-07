@@ -10,6 +10,23 @@ $lastName  = $_POST['last-name']  ?? '';
 $email     = $_POST['email']      ?? '';
 $phone     = $_POST['phone']      ?? '';
 $message   = $_POST['message']    ?? '';
+
+try {
+ 
+  $pdo = new PDO('mysql:host=127.0.0.1;dbname=contact_app;charset=utf8mb4', 'root', '');
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  $stmt = $pdo->prepare(
+    'INSERT INTO contact_messages (first_name, last_name, email, phone, message)
+     VALUES (?, ?, ?, ?, ?)'
+  );
+
+  $stmt->execute([$firstName, $lastName, $email, $phone, $message]);
+
+} catch (PDOException $e) {
+
+  error_log('DB insert failed: ' . $e->getMessage());
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
